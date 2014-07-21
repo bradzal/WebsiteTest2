@@ -1,22 +1,27 @@
 
 $name=$_POST['name'];
-$city=$_POST['city'];
-$phone=$_POST['phone'];
 $email=$_POST['email'];
+$phone=$_POST['phone'];
+$subject=$_POST['subject'];
+$inquiry=$_POST['inquiry'];
  
 $to = "bzalischuk@provautomation.com";
-$subject = "Future Tutorials Contact Form Test";
-$message = " Name: " . $name . "\r\n City: " . $city . "\r\n Phone: " . $phone . "\r\n Email: " . $email;
+$from = "ProV Inquiry";
+
+$body = "From: $name\n E-mail: $email\n Message:\n $inquiry";
+ 
+ <?php
+ if ($_POST['send']) {
+	if (mail ($to, $subject, $body $from)) {
+		echo '<p>Your message has been sent!</p>';
+	} else {
+		echo '<p>Something went wrong, go back and try again!</p>';
+	}
+ }
+ ?>
+ 
+
  
  
-$from = "FutureTutorials";
-$headers = "From:" . $from . "\r\n";
-$headers .= "Content-type: text/plain; charset=UTF-8" . "\r\n"; 
- 
-if(@mail($to,$subject,$message,$headers))
-{
-  print "<script>document.location.href="success.html";</script>";
-}else{
-  echo "Error! Please try again.";
-}
+
 
