@@ -108,9 +108,18 @@
 		header h3
 		{
 			font-size: 1.5em;
+			color: #800000;
+			font-weight: 300;
 		}
 		
 		header h4
+		{
+			font-size: 1.6em;
+			line-height: 1.0em;
+			color: #800000;
+		}
+		
+		header h5
 		{
 			font-size: 1.2em;
 		}
@@ -122,6 +131,8 @@
 			padding: 0 0 0.5em 0;
 			text-transform: uppercase;
 			font-size: 1.4em;
+			color: #800000;
+			font-weight: 400;
 		}
 		
 	footer
@@ -204,6 +215,9 @@
 					margin: 0 auto;
 					width: auto;
 				}
+				
+			
+			
 
 	/* Lists */
 
@@ -502,7 +516,7 @@
 		.fa-eye:before{content:"\f06e"}
 		.fa-eye-slash:before{content:"\f070"}
 		.fa-warning:before,.fa-exclamation-triangle:before{content:"\f071"}
-		.fa-plane:before{content:"\f072"}
+		.:before{content:"\f072"}
 		.fa-calendar:before{content:"\f073"}
 		.fa-random:before{content:"\f074"}
 		.fa-comment:before{content:"\f075"}
@@ -790,7 +804,7 @@
 	{
 		position: absolute;
 		left: 0em;
-		top: 2.5em;
+		top: 2.2em;
 	}
 	
 		#logo h1
@@ -832,8 +846,8 @@
 			#nav > ul > li > span
 			{
 				display: block;
-				margin-left: 0.7em;
-				padding: 0.80em 1.2em;
+				margin-left: 0em;
+				padding: 0.5em 1.2em;
 				letter-spacing: 0.06em;
 				text-decoration: none;
 				text-transform: uppercase;
@@ -844,15 +858,76 @@
 
 			#nav li.active a
 			{
-				background: #C13333;
-				border-radius: 5px;
+				background: #A60000;
+				border-radius: 0px;
 				color: #FFF;
 			}
-
-			#nav > ul > li > ul
+			
+			#nav li a
 			{
-				display: none;
+				display: block;
+				margin-left: 0.1em;
+				padding: 0.1em 0.1em;
+				letter-spacing: 0.06em;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-size: 1.1em;
+				outline: 0;
+				color: #333;
+				transition: background 0.2s linear 0s, color 0.2s linear 0s;
 			}
+			
+			#nav ul li:hover a
+			{
+				background: #A60000;
+				border-radius: 0px;
+				color: #FFF;
+				left: 0em;
+			}
+			
+			#nav li:hover a
+			{
+				background: #FFFFFF;
+				border-radius: 2px;
+				color: #000;
+				padding: 0.5em 1.2em;
+				left: 11em;
+				box-shadow: 0 2px 2px -1px rgbs(0, 0, 0, 0.055);
+				margin: 5;
+			}
+			
+			#nav li:hover ul a:hover
+			{
+				background: #a64d4d;
+				border-radius: 2px;
+				color: #FFF;
+			}
+			
+			/*Hide dropdown links until they are needed*/
+li ul {
+	display: none;
+}
+
+/*Make dropdown links vertical*/
+#nav ul li ul li {
+	display: block;
+	float: none;
+}
+
+/*Prevent text wrapping*/
+#nav ul li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+/*Display the dropdown on hover*/
+#nav ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+	position: absolute;
+}
+			
+			
 			
 	.dropotron
 	{
@@ -914,7 +989,13 @@
 		background: url(../images/banner08.jpg) no-repeat left;
 		background-size: cover;
 		color: #fff;
+		z-index: -100;
 	}
+	#banner .container
+		{
+			position: relative;
+			padding: 5em 0em;
+		}
 	
 
 /*********************************************************************************/

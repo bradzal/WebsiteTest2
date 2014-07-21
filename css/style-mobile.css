@@ -69,6 +69,8 @@
 		{
 			font-size: 1em;
 		}
+		
+
 	
 /*********************************************************************************/
 /* UI                                                                            */
@@ -76,7 +78,7 @@
 
 	#titleBar
 	{
-		background: #202020 url(images/img0103.jpg) repeat;
+		background: #202020 url(images/img0104.png) repeat;
 	}
 
 		#titleBar .title
@@ -116,7 +118,7 @@
 
 	#navPanel
 	{
-		background: #202020 url(images/img0103.jpg) repeat;
+		background: #202020 url(images/img0104.jpg) repeat;
 		box-shadow: inset -10px 0px 20px 0px rgba(0,0,0,0.5);
 	}
 
