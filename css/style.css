@@ -6,7 +6,7 @@
 
 @charset 'UTF-8';
 
-@font-face{font-family:'FontAwesome';src:url('font/fontawesome-webfont.eot?v=4.0.1');src:url('font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('font/fontawesome-webfont.woff?v=4.0.1') format('woff'),url('font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'),url('font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
+
 
 /*********************************************************************************/
 /* Basic                                                                         */
@@ -23,12 +23,13 @@
 		font-weight: 300;
 		font-size: 11pt;
 		line-height: 1.75em;
+		-webkit-font-smoothing: antialiased;
 	}
 
-	h1,h2,h3,h4,h5,h6
+	h1,h2,h3,h4,h5,h6,h7,h8
 	{
 		letter-spacing: 1px;
-		text-transform: uppercase;
+		text-transform: none;
 		font-weight: 300;
 	}
 	
@@ -81,6 +82,12 @@
 		border-top: solid 1px #ddd;
 	}
 	
+	hr2
+	{
+		border: 0;
+		border-top: solid 1px #000;
+	}
+	
 	blockquote
 	{
 		border-left: solid 0.5em #ddd;
@@ -122,6 +129,19 @@
 		header h5
 		{
 			font-size: 1.2em;
+		}
+		
+		header h7
+		{
+			font-size: 1.8em;
+			line-height: 1.0em;
+		}
+		
+		header h8
+		{
+			font-size: 2.5em;
+			line-height: 1.0em;
+			color: #A60000;
 		}
 
 		header .byline
@@ -349,6 +369,34 @@
 			.button:hover
 			{
 				background: #a64d4d;
+				color: #FFF !important;
+			}
+			
+		.button2
+		{
+			position: relative;
+			z-index: 100;
+			display: inline-block;
+			margin-top: 0.1em;
+			padding: 0.1em 3.5em;
+			background: #fff;
+			border-radius: 3px;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 1.1em;
+			color: #000;
+			-moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			-webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			-o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			-ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			cursor: pointer;
+		}
+
+			.button2:hover
+			{
+				background: #a64d4d;
+				z-index: 100;
 				color: #FFF !important;
 			}
 
@@ -788,12 +836,26 @@
 	{
 		position: relative;
 		background: #fff;
+		z-index: 2;
 	}
 
 		#header .container
 		{
 			position: relative;
-			padding: 4em 0em;
+			padding: 2em 0em;
+		}
+		
+	#header2
+	{
+		position: relative;
+		background: #333;
+		z-index: 1;
+	}
+
+		#header2 .container
+		{
+			position: relative;
+			padding: 0.5em 0em;
 		}
 
 /*********************************************************************************/
@@ -802,10 +864,20 @@
 
 	#logo
 	{
-		position: absolute;
+		position: relative;
+		width: auto;
+		height: auto;
+		background-size: cover;
 		left: 0em;
-		top: 2.2em;
+		top: -0.9em;
+		float: left;
 	}
+	
+		#logo .container
+		{
+			position: relative;
+			padding: 2em 0em;
+		}
 	
 		#logo h1
 		{
@@ -827,14 +899,14 @@
 
 	#nav
 	{
-		position: absolute;
-		right: 0em;
-		top: 2.2em;
+		position: relative;
+		top: -0.3em;
 	}
+	
 
 		#nav > ul > li
 		{
-			float: left;
+			float: right;
 		}
 		
 			#nav > ul > li:last-child
@@ -846,12 +918,12 @@
 			#nav > ul > li > span
 			{
 				display: block;
-				margin-left: 0em;
-				padding: 0.5em 1.2em;
+				margin-left: 0.1em;
+				padding: 0.3em 1.2em;
 				letter-spacing: 0.06em;
 				text-decoration: none;
 				text-transform: uppercase;
-				font-size: 1.1em;
+				font-size: 1em;
 				outline: 0;
 				color: #333;
 			}
@@ -871,7 +943,7 @@
 				letter-spacing: 0.06em;
 				text-decoration: none;
 				text-transform: uppercase;
-				font-size: 1.1em;
+				font-size: 1em;
 				outline: 0;
 				color: #333;
 				transition: background 0.2s linear 0s, color 0.2s linear 0s;
@@ -890,7 +962,7 @@
 				background: #FFFFFF;
 				border-radius: 2px;
 				color: #000;
-				padding: 0.5em 1.2em;
+				padding: 0.3em 1.2em;
 				left: 11em;
 				box-shadow: 0 2px 2px -1px rgbs(0, 0, 0, 0.055);
 				margin: 5;
@@ -927,7 +999,114 @@ li ul {
 	position: absolute;
 }
 			
+/********Nav Menu 2*********/
+
+#nav2
+	{
+		position: relative;
+		top: -1.5em;
+		z-index: 100;
+	}
+	
+
+		#nav2 > ul > li
+		{
+			float: right;
+		}
+		
+			#nav2 > ul > li:last-child
+			{
+				padding-right: 0;
+			}
+
+			#nav2 > ul > li > a,
+			#nav2 > ul > li > span
+			{
+				display: block;
+				margin-left: 0em;
+				padding: 0.2em 1em;
+				letter-spacing: 0.06em;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-size: 1.0em;
+				outline: 0;
+				color: #fff;
 			
+			}
+
+			#nav2 li.active a
+			{
+				background: #fff;
+				border-radius: 0px;
+				color: #333;
+			}
+			
+			#nav2 li a
+			{
+				display: block;
+				margin-left: 0.1em;
+				padding: 0.1em 0.1em;
+				letter-spacing: 0.06em;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-size: 1.0em;
+				outline: 0;
+				color: #333;
+				transition: background 0.2s linear 0s, color 0.2s linear 0s;
+			}
+			
+			#nav2 ul li:hover a
+			{
+				background: #fff;
+				border-radius: 0px;
+				color: #333;
+				left: 0em;
+			}
+			
+			#nav2 li:hover a
+			{
+				background: #FFFFFF;
+				border-radius: 0px;
+				color: #000;
+				padding: 0.2em 1em;
+				left: 11em;
+				margin: 0;
+	
+			}
+			
+			#nav2 li:hover ul a:hover
+			{
+				background: #aaaaaa;
+				border-radius: 2px;
+				color: #FFF;
+			}
+			
+			/*Hide dropdown links until they are needed*/
+li ul {
+	display: none;
+}
+
+/*Make dropdown links vertical*/
+#nav2 ul li ul li {
+	display: block;
+	float: none;
+}
+
+/*Prevent text wrapping*/
+#nav2 ul li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+/*Display the dropdown on hover*/
+#nav2 ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+	position: absolute;
+}
+
+
+/***************************/			
 			
 	.dropotron
 	{
@@ -986,7 +1165,7 @@ li ul {
 	{
 		position: relative;
 		padding: 12em 0em;
-		background: url(../images/banner08.jpg) no-repeat left;
+		background: url(../images/banner19.jpg) no-repeat left;
 		background-size: cover;
 		color: #fff;
 		z-index: -100;
@@ -994,7 +1173,7 @@ li ul {
 	#banner .container
 		{
 			position: relative;
-			padding: 5em 0em;
+			padding: 3em 0em;
 		}
 	
 	#bannercontact
@@ -1002,8 +1181,61 @@ li ul {
 		position: relative;
 		background-size: cover;
 		z-index: -100;
-		height: 350px
+		height: 350px;
+		top: -23px;		
 	}
+	
+		#bannercontact .container
+		{
+			position: relative;
+			padding: 3em 0em;
+		}
+	
+	#bannerabout
+	{
+		position: relative;
+		padding: 8em 0em;
+		background: url(../images/provantageofficesign2.png) no-repeat left;
+		background-size: cover;
+		color: #fff;
+		z-index: -100;
+	}
+	#bannerabout .container
+		{
+			position: relative;
+			padding: 3em 0em;
+		}
+		
+	#bannercareers
+	{
+		position: relative;
+		padding: 8em 0em;
+		background: url(../images/careersbanner.jpg) no-repeat left;
+		background-size: cover;
+		color: #fff;
+		z-index: -100;
+	}
+	#bannercareers .container
+		{
+			position: relative;
+			padding: 3em 0em;
+		}
+		
+	#bannernews
+	{
+		position: relative;
+		padding: 8em 0em;
+		background: url(../images/newsbanner.jpg) no-repeat left;
+		background-size: cover;
+		color: #fff;
+		z-index: -100;
+	}
+	#bannernews .container
+		{
+			position: relative;
+			padding: 3em 0em;
+		}
+	
 	
 	
 
@@ -1014,12 +1246,19 @@ li ul {
 	#page
 	{
 		position: relative;
-		background: #fff;
+		background: #eeeeee;
+	}
+	
+	#page.featured
+	{
+		position: relative;
+		background: #ffffff;
 	}
 
 	#main
 	{
-		border-top: 1px solid;
+		border-top: 0px solid;
+		position: relative;
 		border-color: rgba(0,0,0,.2);
 	}
 	
@@ -1099,6 +1338,7 @@ li ul {
 	#featured
 	{
 		position: relative;
+		margin-top: -5em;
 	}
 	
 	#featured .divider

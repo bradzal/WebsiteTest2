@@ -91,19 +91,8 @@
 #wowslider-container1  .ws_bullets { 
 	padding: 5px; 
 }
-#wowslider-container1 .ws_bullets a { 
-	width:40px;
-	height:5px;
-	background: url(./bullet.png) left top;
-	float: left; 
-	text-indent: -4000px; 
-	position:relative;
-	margin: 4px 0 0 5px;
-	color:transparent;
-}
-#wowslider-container1 .ws_bullets a:hover, #wowslider-container1 .ws_bullets a.ws_selbull{
-	background-position: 0 100%;
-}
+
+
 #wowslider-container1 a.ws_next, #wowslider-container1 a.ws_prev {
 	position:absolute;
 	display:block;
