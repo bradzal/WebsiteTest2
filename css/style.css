@@ -82,11 +82,19 @@
 		border-top: solid 1px #ddd;
 	}
 	
+	hr.header
+	{
+		border: 0;
+		border-top: solid 3px #a60000;
+	}
+	
 	hr2
 	{
 		border: 0;
 		border-top: solid 1px #000;
 	}
+	
+	
 	
 	blockquote
 	{
@@ -281,9 +289,9 @@
 		
 			ul.style1 li
 			{
-				padding: 0.60em 0em;
+				padding: 0.20em 0em;
 				border-top: 1px solid;
-				border-color: rgba(0,0,0,.1);
+				border-color: rgba(0,0,0,.3);
 			}
 			
 			ul.style1 li:first-child
@@ -836,7 +844,7 @@
 	{
 		position: relative;
 		background: #fff;
-		z-index: 2;
+		z-index: 3;
 	}
 
 		#header .container
@@ -849,13 +857,26 @@
 	{
 		position: relative;
 		background: #333;
-		z-index: 1;
+		z-index: 2;
 	}
 
 		#header2 .container
 		{
 			position: relative;
 			padding: 0.5em 0em;
+		}
+		
+	#header3
+	{
+		position: relative;
+		background: #a60000;
+		z-index: 2;
+	}
+
+		#header3 .container
+		{
+			position: relative;
+			padding: 1px;
 		}
 
 /*********************************************************************************/
@@ -1180,7 +1201,7 @@ li ul {
 	{
 		position: relative;
 		background-size: cover;
-		z-index: -100;
+		z-index: 1;
 		height: 350px;
 		top: -23px;		
 	}
@@ -1236,6 +1257,21 @@ li ul {
 			padding: 3em 0em;
 		}
 	
+	#bannersafety
+	{
+		position: relative;
+		padding: 8em 0em;
+		background: url(../images/safetybanner.jpg) no-repeat left;
+		background-size: cover;
+		color: #fff;
+		z-index: -100;
+	}
+	
+	#bannersafety .container
+		{
+			position: relative;
+			padding: 3em 0em;
+		}
 	
 	
 
